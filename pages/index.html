@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Market Place</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+    <div class="logo"><img src="../images/logo.png" alt="logo"></div>
+
+    <h1 class="welcome-title">Welcome to your new favorite marketplace</h1>
+
+    <p class="welcome-text">
+      Buy what you need. Sell what you don’t. It’s that simple.
+    </p>
+
+    <!-- Search -->
+    <div class="searchCategory">
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search items..." />
+        <button onclick="searchItems()">Search</button>
+      </div>
+    </div>
+
+    <!-- Items Grid -->
+    <div class="cards" id="itemsContainer">
+      <!-- Real items will load here -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
