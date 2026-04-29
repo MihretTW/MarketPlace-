@@ -1,0 +1,59 @@
+.forms {
+  margin: 90px auto;
+  text-align: center;
+  background-color: rgb(30, 27, 27);
+  color: white;
+  width: 440px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+#signin-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+  padding-top: 40px;
+}
+
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 10px;
+}
+p {
+  padding-bottom: 30px;
+}
+input {
+  background-color: rgb(54, 45, 45);
+  height: 40px;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 0 12px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #ff4ecd;
+}
+button {
+  background-color: rgb(33, 7, 57);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+button:hover {
+  background-color: rgb(54, 9, 96);
+}
+
+label {
+  text-align: left;
+  padding-left: 10px;
+}
