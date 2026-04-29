@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post New Item - Market Place</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar-placeholder"></div>
+
+    <div class="post-container">
+      <h1 class="post-title">Post a New Item</h1>
+      <p class="post-subtitle">Sell something you don't need anymore</p>
+
+      <form id="postForm" class="post-form" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="title">Item Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            placeholder="e.g. Used Laptop"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price (in ETB)</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            required
+            placeholder="15000"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            rows="5"
+            placeholder="Describe your item..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Item Image (optional)</label>
+
+          <input type="file" id="image" name="image" accept="image/*" />
+          <small style="color: #888">JPG, PNG, or GIF only. Max 5MB.</small>
+        </div>
+
+        <button type="submit" class="post-btn">Post Item</button>
+      </form>
+
+      <div id="message" class="message"></div>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/post.js"></script>
+  </body>
+</html>
