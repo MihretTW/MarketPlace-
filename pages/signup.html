@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/sign.css" />
+  </head>
+  <body>
+    <div id="navbar-placeholder"></div>
+    <div class="forms">
+      <form id="signup-form">
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username" required />
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" placeholder="Phone" required />
+        <label for="location">Location</label>
+        <input type="text" name="location" placeholder="Location" required />
+        <label for="telegram_username">Telegram Username</label>
+        <input
+          type="text"
+          name="telegram_username"
+          placeholder="Telegram username"
+          required
+        />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email" required />
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </div>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const username = document.querySelector('[name="username"]').value;
+        const phone = document.querySelector('[name="phone"]').value;
+        const location = document.querySelector('[name="location"]').value;
+        const telegram_username = document.querySelector('[name="telegram_username"]').value;
+        const email = document.querySelector('[name="email"]').value;
+        const password = document.querySelector('[name="password"]').value;
+        handleSignup(username, email, password, phone, location, telegram_username);
+      });
+    </script>
+  </body>
+</html>
