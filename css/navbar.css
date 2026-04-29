@@ -1,0 +1,24 @@
+header{
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+.main-navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-of-site{
+    margin-right: 20px;
+    padding-right: 100px;
+}
+.Dashboard li {
+    display: inline;
+    padding: 10px;
+    color: #cfcfcf;
+}
+.Dashboard li a {
+    text-decoration: none;
+    color: #cfcfcf;
+    transition: 0.3s;   
+}
