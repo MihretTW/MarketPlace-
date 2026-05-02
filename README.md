@@ -24,11 +24,6 @@ MarketPlace is a simple web-based marketplace application where users can:
 
 ---
 
-## acces the project using : http://localhost/MarketPlace/
-
-
----
-
 ##  Project Structure
 MarketPlace/
 │
