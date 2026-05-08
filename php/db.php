@@ -1,11 +1,10 @@
 <?php
-$servername = getenv('MYSQLHOST');
-$username   = getenv('MYSQLUSER');
-$password   = getenv('MYSQLPASSWORD');
-$dbname     = getenv('MYSQLDATABASE');
-$port       = (int) getenv('MYSQLPORT');
+$servername = "localhost";
+$username   = "root";
+$password   = "";
+$dbname     = "marketplace";
 
-$connect = new mysqli($servername, $username, $password, $dbname, $port);
+$connect = new mysqli($servername, $username, $password, $dbname);
 
 if ($connect->connect_error) {
     die(json_encode(["status" => "error", "message" => "Database connection failed: " . $connect->connect_error]));
