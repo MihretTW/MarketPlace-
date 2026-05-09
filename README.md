@@ -208,4 +208,5 @@ Stored securely (hashed)
 - Shared comments working
 - Cart implemented (localStorage)
 
+## link 👉 https://market-place-red-eta.vercel.app/pages/index.html
 ---
