@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/pages/index.html" },
+    { "src": "/signin", "dest": "/pages/signin.html" },
+    { "src": "/signup", "dest": "/pages/signup.html" },
+    { "src": "/cart", "dest": "/pages/cart.html" },
+    { "src": "/item", "dest": "/pages/item.html" },
+    { "src": "/post", "dest": "/pages/post.html" },
+    { "src": "/profile", "dest": "/pages/profile.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
