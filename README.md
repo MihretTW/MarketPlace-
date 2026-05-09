@@ -14,6 +14,8 @@ MarketPlace is a simple web-based marketplace application where users can:
 - View and manage their profile (including changing password)  
 
 ---
+## link 👉[ https://market-place-red-eta.vercel.app/pages/index.html](https://link-market-place.vercel.app/)
+---
 
 ##  Tech Stack
 
@@ -208,5 +210,5 @@ Stored securely (hashed)
 - Shared comments working
 - Cart implemented (localStorage)
 
-## link 👉 https://market-place-red-eta.vercel.app/pages/index.html
+
 ---
