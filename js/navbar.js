@@ -21,11 +21,32 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         placeholder.innerHTML = data;
 
+        const navbar = placeholder.querySelector("nav");
+        if (navbar) {
+          const links = navbar.querySelectorAll("a[href]");
+          links.forEach((link) => {
+            const href = link.getAttribute("href");
+            if (!href) return;
+
+            const isExternal = /^https?:\/\//i.test(href);
+            const isAbsolute = href.startsWith("/");
+            const isHash = href.startsWith("#");
+
+            if (isExternal || isAbsolute || isHash) return;
+
+            if (!inPagesFolder && !href.startsWith("pages/")) {
+              link.setAttribute("href", `pages/${href}`);
+            }
+          });
+        }
+
         const signinLi = document.getElementById("nav-signin");
         const signupLi = document.getElementById("nav-signup");
         const logoutLi = document.getElementById("nav-logout");
         const logoutLink = document.getElementById("logout-link");
 
+
+        
         if (logoutLink) {
           logoutLink.addEventListener("click", async function (e) {
             e.preventDefault();
