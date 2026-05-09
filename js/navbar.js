@@ -3,7 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const placeholder = document.getElementById("navbar-placeholder");
 
   if (placeholder) {
-    fetch("../navbar.html")
+    const navbarCssHref = "../css/navbar.css";
+    const existingNavbarCss = document.querySelector(
+      `link[rel="stylesheet"][href="${navbarCssHref}"]`,
+    );
+    if (!existingNavbarCss) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = navbarCssHref;
+      document.head.appendChild(link);
+    }
+
+    fetch("navbar.html")
       .then((response) => response.text())
       .then((data) => {
         placeholder.innerHTML = data;
