@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const placeholder = document.getElementById("navbar-placeholder");
 
   if (placeholder) {
-    const navbarCssHref = "../css/navbar.css";
+    const inPagesFolder = window.location.pathname.includes("/pages/");
+    const navbarHtmlPath = inPagesFolder ? "navbar.html" : "pages/navbar.html";
+    const navbarCssHref = inPagesFolder ? "../css/navbar.css" : "css/navbar.css";
     const existingNavbarCss = document.querySelector(
       `link[rel="stylesheet"][href="${navbarCssHref}"]`,
     );
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.head.appendChild(link);
     }
 
-    fetch("navbar.html")
+    fetch(navbarHtmlPath)
       .then((response) => response.text())
       .then((data) => {
         placeholder.innerHTML = data;
@@ -33,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
               // ignore
             }
             localStorage.removeItem("user");
-            window.location.href = "index.html";
+            window.location.href = inPagesFolder ? "index.html" : "pages/index.html";
           });
         }
 
